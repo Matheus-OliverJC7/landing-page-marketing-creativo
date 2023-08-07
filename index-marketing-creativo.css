@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'poppins-regular';
+    src: url(poppins-regular-webfont.woff);
+}
+body{
+    background: rgb(34, 34, 34);
+    color: #fff;
+    font-family: 'poppins-regular';
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 15px;
+}
+#cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{line-height: 10px;}
+#logo h2{font-size: 2em;}
+main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+}
+.nav-list{list-style: none;}
+.nav-list li{margin-right: 32px; display: inline;}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-link:hover{color: #9B06CE;}
+.login-btn{
+    border: 1px solid #9B06CE;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.login-btn:hover{background: #9B06CE;}
+#titulo{line-height: 10px;}
+#titulo h2{font-size: 3em;}
+.h2-purple{color: rgb(132, 13, 201);}
+.about-form{
+    font-size: 1.1em;
+    text-align: justify;
+}
+.nome-email{
+    padding: 10px;
+    margin-bottom: 10px;
+}
