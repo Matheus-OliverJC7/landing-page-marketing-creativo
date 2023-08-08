@@ -8,6 +8,7 @@ body{
     color: #fff;
     font-family: 'poppins-regular';
     max-width: 1200px;
+    min-width: 370px;
     margin: 0px auto;
     padding: 15px;
 }
@@ -45,8 +46,50 @@ main{
 .about-form{
     font-size: 1.1em;
     text-align: justify;
+    max-width: 400px;
+    min-width: 320px;
 }
-.nome-email{
-    padding: 10px;
-    margin-bottom: 10px;
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+input{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+}
+form [type="submit"] {
+    height: 50px;
+    width: 50%;
+    background: #9B06CE;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (max-width: 1064px) {
+    #cabecalho{
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+    }
+    .imagem{
+        margin-top: 30px;
+    }
+    #titulo {
+        text-align: center;
+    }
+    .about-form{
+        margin: 0px auto;
+        font-size: 1.2em;
+    }
+    form{
+        margin: 0px auto;
+    }
+    .imagem{
+        text-align: center;
+    }
 }
