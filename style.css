@@ -92,4 +92,43 @@ input{
     .imagem{
         padding-top: 30px;
     }
+    .nav-list{display: none;}
+    .menu-mobile-icon{
+        position: absolute;
+        right: 5vw;
+        top: 5vh;
+        display: block;
+        padding: 10px;
+    }
+    .line-1, .line-2, .line-3{
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px 0px;
+    }
+    #menu-mobile{
+        display: block;
+        position: absolute;
+        list-style: none;
+        right: 0vw;
+        top: 0vh;
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+        width: 40vw;
+        align-items: center;
+        background-color: #2e0c3a;
+        margin: -8px 0px;
+        padding: 0px;
+    }
+    #menu-mobile li{
+        margin: 50px 0px;
+    }
+    .sair-menu{
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 2em;
+        padding-bottom: 10px;
+    }
 }
