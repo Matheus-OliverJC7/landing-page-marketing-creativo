@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Minha primeira Landing Page</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
 </head>
 <body>
     <section>
@@ -21,20 +22,22 @@
                     <li><a class="nav-link" href="#">Contato</a></li>
                     <li><a class="login-btn" href="#">Já tem uma conta?</a></li>
                 </ul>
-                <div class="menu-mobile-icon">
+                <div onclick="showMenu(1)" class="menu-mobile-icon">
                     <div class="line-1"></div>
                     <div class="line-2"></div>
                     <div class="line-3"></div>
                 </div>
-                <ul id="menu-mobile">
-                    <span class="sair-menu">X</span>
-                    <li><a class="nav-link" href="#">Inicio</a></li>
-                    <li><a class="nav-link" href="#">Serviços</a></li>
-                    <li><a class="nav-link" href="#">Sobre</a></li>
-                    <li><a class="nav-link" href="#">Contato</a></li>
-                    <li><a class="login-btn" href="#">Já tem uma conta?</a></li>
-                </ul>
             </nav>
+                <nav onclick="showMenu(2)" id="menu-mobile">
+                    <ul>
+                        <span class="sair-menu">X</span>
+                        <li><a class="nav-link" href="#">Inicio</a></li>
+                        <li><a class="nav-link" href="#">Serviços</a></li>
+                        <li><a class="nav-link" href="#">Sobre</a></li>
+                        <li><a class="nav-link" href="#">Contato</a></li>
+                        <li><a class="login-btn" href="#">Já tem uma conta?</a></li>
+                    </ul>
+                </nav>
         </header>
         <main>
         <aside>
@@ -50,6 +53,7 @@
             </form>
         </aside>
         <picture class="imagem">
+            <source media="(max-width: 620px)" srcset="mulher-roxa-yoga-red.png" type="image/png"/>
             <img src="mulher-roxa-yoga.png" alt="mulher meditando"/>
         </picture>
         </main>
