@@ -46,9 +46,9 @@
                 <h2>na Newslatter</h2>
             </hgroup>
             <p class="about-form">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <form>
-                <input type="text" placeholder="Nome" maxlength="30"/>
-                <input type="email" placeholder="E-mail" maxlength="40"/>
+            <form method="post" autocomplete="on">
+                <input type="text" placeholder="Nome" maxlength="30" minlenght="2" required/>
+                <input type="email" placeholder="E-mail" maxlength="40" required/>
                 <input class="btn-enviar" type="submit" value="Enviar"/>
             </form>
         </aside>
