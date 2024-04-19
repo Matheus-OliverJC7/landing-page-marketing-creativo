@@ -1,22 +1,17 @@
-const menu = document.querySelector('.menu-mobile');
-const line1 = document.querySelector('.line1');
-const line2 = document.querySelector('.line2');
-const line3 = document.querySelector('.line3');
-const header = document.getElementsByTagName('header')[0];
-const menuIcon = document.querySelector('.menu-mobile-icon').addEventListener('click', function(){
-    if(menu.style.display == 'block'){
-        header.style.borderBottom = 'none';
-        menu.style.display = 'none';
-        menu.classList.remove('menu-active');
-        line1.classList.remove('line1active');
-        line2.classList.remove('line2active');
-        line3.classList.remove('line3active');
-    }else{
-        header.style.borderBottom = '2px solid rgba(255, 255, 255, 0.5)';
-        menu.style.display = 'block';
-        menu.classList.add('menu-active');
-        line1.classList.add('line1active');
-        line2.classList.add('line2active');
-        line3.classList.add('line3active');
-    }
-})
+const menu = document.querySelector('.mobile-menu');
+const openMenu = document.querySelector('.mobile-menu-icon');
+const closeMenu = document.querySelector('.close-mobile-menu');
+function changeMenu(){
+    document.body.classList.toggle('blockScrollY');
+    menu.classList.toggle('changeMenu');
+    document.addEventListener('click', function(event){
+        let isClickMenu = menu.contains(event.target);
+        let isClickIcon = openMenu.contains(event.target);
+        if(!isClickIcon && !isClickMenu){
+            document.body.classList.remove('blockScrollY');
+            menu.classList.remove('changeMenu');
+        }
+    });
+}
+openMenu.addEventListener('click', changeMenu);
+closeMenu.addEventListener('click', changeMenu);
