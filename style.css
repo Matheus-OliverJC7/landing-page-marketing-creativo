@@ -133,8 +133,6 @@ footer{
         border-radius: 10px;
     }
     .mobile-menu{
-        visibility: hidden;
-        opacity: 0%;
         display: block;
         background-color: var(--mobile-menu-bg);
         position: absolute;
@@ -144,8 +142,9 @@ footer{
         width: 100%;
         max-width: 420px;
         overflow-y: scroll;
-        overflow-x: scroll;
         padding: 5px 1rem 1rem 1rem;
+        visibility: hidden;
+        opacity: 0%;
         transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     }
     .close-mobile-menu{
@@ -190,7 +189,7 @@ footer{
 }
 /*classes*/
 .blockScrollY{overflow: hidden;}
-.changeMenu{
+.openMenu{
     opacity: 100%;
     visibility: visible;
 }

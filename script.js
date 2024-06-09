@@ -1,17 +1,14 @@
 const menu = document.querySelector('.mobile-menu');
-const openMenu = document.querySelector('.mobile-menu-icon');
-const closeMenu = document.querySelector('.close-mobile-menu');
-function changeMenu(){
+document.querySelector('.mobile-menu-icon').addEventListener('click', ()=>{
     document.body.classList.toggle('blockScrollY');
-    menu.classList.toggle('changeMenu');
-    document.addEventListener('click', function(event){
-        let isClickMenu = menu.contains(event.target);
-        let isClickIcon = openMenu.contains(event.target);
-        if(!isClickIcon && !isClickMenu){
-            document.body.classList.remove('blockScrollY');
-            menu.classList.remove('changeMenu');
-        }
-    });
-}
-openMenu.addEventListener('click', changeMenu);
-closeMenu.addEventListener('click', changeMenu);
+    menu.classList.toggle('openMenu');
+});
+document.addEventListener('click', (event)=>{
+    let isClickMenu = menu.contains(event.target);
+    let isClickOpen = document.querySelector('.mobile-menu-icon').contains(event.target);
+    let isClickClose = document.querySelector('.close-mobile-menu').contains(event.target);
+    if(!isClickOpen && !isClickMenu || isClickClose){
+        document.body.classList.remove('blockScrollY');
+        menu.classList.remove('openMenu');
+    }
+});
